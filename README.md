@@ -1,7 +1,5 @@
-# AICCF
-AI Content Classification Framework for AI involvement and human accountability
-
 # AICCF (AI Content Classification Framework)
+AI Content Classification Framework for AI involvement and human accountability
 
 AICCF is a structured, content-agnostic framework designed to classify work based on the level of AI involvement and human accountability.
 
