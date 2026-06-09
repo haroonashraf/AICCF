@@ -92,6 +92,41 @@ This framework is content-agnostic and can be applied across:
 
 ---
 
+## How to Use AICCF (in 30 seconds)
+
+
+Pick the right tag based on how the content was created:
+
+- AIG-U → AI Generated (Unreviewed)
+- AIG-R → AI Generated (Reviewed)
+- AIA-HL → AI Assisted (Human-Led)
+- H-AIE → Human Created (AI Enhanced)
+- FH → Fully Human
+
+**Add the tag to your content:**
+
+AICCF: <TAG>
+
+Example:
+AICCF: AIA-HL
+
+
+**(Optional) Add version for traceability:**
+AICCF v1.0: AIA-HL
+
+
+Use it where it matters most:
+
+
+Documents
+Code comments
+Reports / dashboards
+Pull requests
+
+That’s it — no tools, no setup required.
+
+---
+
 ## Attribution
 
 This framework is based on an original concept developed by the author and refined through an AI-assisted, human-led and reviewed process.
