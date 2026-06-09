@@ -107,7 +107,7 @@ Pick the right tag based on how the content was created:
 
 AICCF: <TAG>
 
-Example:
+**Example:**
 AICCF: AIA-HL
 
 
