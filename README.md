@@ -7,7 +7,7 @@ It provides a simple and consistent way to describe how content is created, revi
 
 ---
 
-## Overview
+# Overview
 
 As AI becomes increasingly integrated into everyday work, distinguishing between AI-generated and human-created content is no longer sufficient.
 
@@ -18,7 +18,7 @@ AICCF introduces a practical model that focuses on:
 
 ---
 
-## Framework Levels
+# Framework Levels
 
 **Level 1 – Fully AI-Generated (Unreviewed)**  
 Content generated entirely by AI with no human validation.  
@@ -42,7 +42,7 @@ _Used where strict control or compliance is required._
 
 ---
 
-## Principles
+# Principles
 
 - Human accountability is always required  
 - AI is assistive, not authoritative  
@@ -52,19 +52,19 @@ _Used where strict control or compliance is required._
 
 ---
 
-## Suggested Tags
+# Tags
 
 To simplify adoption, the following tags can be used:
 
-- `AIG-U` → AI Generated (Unreviewed)  
-- `AIG-R` → AI Generated (Reviewed)  
-- `AIA-HL` → AI Assisted (Human-Led)  
-- `H-AIE` → Human Created (AI Enhanced)  
+- `AIG-U` → AI-Generated Unreviewed  
+- `AIG-R` → AI-Generated Reviewed  
+- `AIA-HL` → AI-Assisted Human-Led  
+- `H-AIE` → Human-Created AI-Enhanced  
 - `FH` → Fully Human  
 
 ---
 
-## Example Use Cases
+# Example Use Cases
 
 - Draft content / brainstorming → `AIG-U`  
 - Reports / documentation → `AIG-R` or `AIA-HL`  
@@ -73,7 +73,7 @@ To simplify adoption, the following tags can be used:
 
 ---
 
-## Example Disclaimers
+# Example Disclaimers
 
 - “This content was generated with AI assistance and reviewed by a human.”  
 - “AI-generated output – requires validation before use.”  
@@ -81,7 +81,7 @@ To simplify adoption, the following tags can be used:
 
 ---
 
-## Applicability
+# Applicability
 
 This framework is content-agnostic and can be applied across:
 - Articles and reports  
@@ -91,58 +91,198 @@ This framework is content-agnostic and can be applied across:
 - End-to-end project deliverables  
 
 ---
+#  AICCF Usage Syntax
+------------------
 
-## How to Use AICCF (in 30 seconds)
+AICCF supports two standard usage styles for content classification.
 
+* * *
 
-Pick the right tag based on how the content was created:
+### Style 1 – Tag Only (Default)
 
-- AIG-U → AI Generated (Unreviewed)
-- AIG-R → AI Generated (Reviewed)
-- AIA-HL → AI Assisted (Human-Led)
-- H-AIE → Human Created (AI Enhanced)
-- FH → Fully Human
+**Syntax:**
 
-**Add the tag to your content:**
+`Classification: AICCF: <TAG>`
 
-AICCF: <TAG>
+* * *
 
-**Example:**
-AICCF: AIA-HL
+### Style 2 – Tag with Details
 
+**Syntax:**
 
-**(Optional) Add version for traceability:**
-AICCF v1.0: AIA-HL
+`Classification: AICCF: <TAG> (<DETAIL>)`
 
 
-Use it where it matters most:
+# Integration Guide (How to Use AICCF Tags)
 
+## 1. Add a “Global Reference” (Recommended)
+-----------------------------------------
+In shared or long-lived contexts such as:
 
-Documents
-Code comments
-Reports / dashboards
-Pull requests
+*   repositories
+*   documentation
+*   codebases
 
-That’s it — no tools, no setup required.
+It is recommended to include a reference to AICCF once at the beginning to ensure clarity and traceability.
+
+**Recommended format:**
+
+`This project uses AICCF v1.0. Reference: https://github.com/haroonashraf/AICCF`
+
+* * *
+
+**Alternative (more descriptive):**
+
+`This project uses AICCF (AI Content Classification Framework) for content classification. Reference: https://github.com/haroonashraf/AICCF`
+
+* * *
+
+After this reference is defined, AICCF tags can be used independently throughout the content:
+
+`AICCF: AIA-HL`
+
+## 2. Markdown / Documentation (Clean & Professional)
+
+**Style 1 - Tag Only**
+```
+# Earth-Like Planets Report
+Classification: AICCF: AIA-HL 
+This report analyses near by Earth-like planets...
+```
+**Style 2 - Tag with Level Name**
+```
+# Sales Performance Report
+Classification: AICCF: AIA-HL (AI-Assisted Human-Led)
+This report analyses near by Earth-like planets...
+```
+
+## 3. Technical Documentation (More Structured)
+**Style 1**
+```
+## Metadata (Style 1)
+
+- Classification: AICCF: AIG-R
+- Author: Data Engineering Team
+- Last Updated: 2026-01-09
+```
+**Style 2**
+```
+## Metadata (Style 2)
+
+- Classification: AICCF: AIG-R (AI-Generated Reviewed)
+- Author: Data Engineering Team
+- Last Updated: 2026-01-09
+```
+
+## 4. Python Code Example
+```python
+# Classification: AICCF: AIA-HL (AI-Assisted Human-Led) 
+# Python code designed by a developer assisted by AI 
+
+import math
+def AddBy1(x):
+    return (x+1)
+
+a=1
+a=AddBy1(a)
+print(a)
+```
+
+## 5. SQL Code - Style 1
+```sql
+-- Classification: AICCF: H-AIE (Human-Created AI-Enhanced) 
+-- SQL script written by an analyst optimized with AI 
+
+SELECT TOP 3 Stars from Sky
+```
+
+## 6. GitHub Pull Request (Best Practice) - Style 2
+```MD
+Markdown## Classification: AICCF: AIG-R (AI-Generated Reviewed)
+
+## Notes
+Initial implementation generated using AI and reviewed before submission.
+```
+
+## 7. Commit Message (Lightweight) - Style 2
+```
+Classification: AICCF: AIA-HL
+
+Refactored transformation logic with AI-assisted suggestions
+```
+
+## 8. Data Pipeline / ETL (Very Relevant to You) - Sytle 1
+```
+Yamlpipeline: customer_ingestion
+
+metadata:
+  classification: AICCF: AIA-HL (AI-Assisted Human-Led) 
+  description: Pipeline developed with AI-assisted transformations and human validation
+```
+
+## 9. Dashboard / Report Header - Style 1
+```
+Customer Insights Dashboard
+Classification: AICCF: AIG-R (AI-Generated Reviewed)
+```
+
+## 10. Email / Business Communication
+```Subject: Weekly KPI Summary
+
+Classification: AICCF: AIA-HL
+
+Hi Team,
+Please find the weekly KPI summary below...
+```
+
+## 11. Sensitive / High-Control Content
+Markdown
+```
+Classification: AICCF: FH
+This document has been fully created without AI assistance due to compliance requirements.
+```
 
 ---
 
-## Attribution
+# Specification
+-------------
+
+The official AICCF v1.0 specification is available in:
+
+`/spec/aiccf.json`
+
+
+AICCF follows a versioned approach to ensure consistency and traceability.  
+Older versions remain available and unchanged.
+
+---
+
+## Version(s)
+
+**Current Version:** 
+- AICCF v1.0
+
+**Previous Versions:**
+*   None
+
+# Attribution
 
 This framework is based on an original concept developed by the author and refined through an AI-assisted, human-led and reviewed process.
 Attribution is appreciated when this framework is shared, published, or adapted externally.
+
 For internal or operational use (e.g., tagging, reporting, or day-to-day workflows), explicit attribution is not required.
 Suggested attribution format (when applicable):
-“AICCF (AI Content Classification Framework), developed by Haroon Ashraf”
+
+_This project uses AICCF (AI Content Classification Framework) for content_ classification. Reference: https://github.com/haroonashraf/AICCF
 
 ---
 
-## License
+# License
 This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
 You are free to use, adapt, and share this framework with appropriate attribution.
 
 ---
 
-## Final Note
+# Final Note
 
-AICCF aims to provide a practical and accessible approach to improving transparency, accountability, and trust in AI-assisted work.
+This classification aims to provide a practical and accessible approach to improving transparency, accountability, and trust in AI-assisted work.
