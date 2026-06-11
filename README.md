@@ -249,7 +249,7 @@ This document has been fully created without AI assistance due to compliance req
 
 The official AICCF v1.0 specification is available in:
 
-`/spec-aiccf-v1.json`
+[/spec/spec-aiccf-v1.json](/spec/spec-aiccf-v1.json)
 
 
 AICCF follows a versioned approach to ensure consistency and traceability.  
