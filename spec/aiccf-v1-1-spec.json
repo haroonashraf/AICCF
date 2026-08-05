@@ -1,0 +1,242 @@
+{
+  "framework": "AICCF",
+  "full_name": "AI Content Classification Framework",
+  "version": "1.1",
+  "description": "Framework for classifying content based on AI involvement and human accountability.",
+
+  "overview": {
+    "focus_areas": [
+      "Level of AI involvement",
+      "Degree of human oversight",
+      "Clear accountability and ownership"
+    ]
+  },
+
+  "levels": [
+    {
+      "level": 1,
+      "name": "Fully AI-Generated (Unreviewed)",
+      "tag": "AIG-U",
+      "description": "Content generated entirely by AI with no human validation.",
+      "note": "Not suitable for production or decision-making use."
+    },
+    {
+      "level": 2,
+      "name": "AI-Generated, Human-Reviewed",
+      "tag": "AIG-R",
+      "description": "AI-generated content that has been reviewed and validated by a human.",
+      "note": "Minimum acceptable level for most practical use cases."
+    },
+    {
+      "level": 3,
+      "name": "AI-Assisted, Human-Led",
+      "tag": "AIA-HL",
+      "description": "Content primarily created by a human with AI providing support (drafting, suggestions, structuring).",
+      "note": "Default working model for most scenarios."
+    },
+    {
+      "level": 4,
+      "name": "Human-Created, AI-Enhanced",
+      "tag": "H-AIE",
+      "description": "Human-created content with minor AI assistance (e.g., grammar, formatting, optimisation).",
+      "note": "High confidence with minimal AI influence."
+    },
+    {
+      "level": 5,
+      "name": "Fully Human (No AI Involvement)",
+      "tag": "FH",
+      "description": "Content created entirely without AI assistance.",
+      "note": "Used where strict control, compliance, or complete human authorship is required."
+    }
+  ],
+
+  "principles": [
+    "Human accountability is always required",
+    "AI is assistive, not authoritative",
+    "Validation is required before reliance",
+    "AI involvement should be transparent where appropriate",
+    "Required level of oversight may vary based on risk and use case"
+  ],
+
+  "tags": {
+    "primary": [
+      {
+        "tag": "AIG-U",
+        "name": "AI-Generated Unreviewed",
+        "level": 1
+      },
+      {
+        "tag": "AIG-R",
+        "name": "AI-Generated Reviewed",
+        "level": 2,
+        "alias": "AIA-R"
+      },
+      {
+        "tag": "AIA-HL",
+        "name": "AI-Assisted Human-Led",
+        "level": 3
+      },
+      {
+        "tag": "H-AIE",
+        "name": "Human-Created AI-Enhanced",
+        "level": 4
+      },
+      {
+        "tag": "FH",
+        "name": "Fully Human (No AI Involvement)",
+        "level": 5
+      }
+    ],
+
+    "aliases": [
+      {
+        "tag": "AIA-R",
+        "name": "AI-Assisted Reviewed",
+        "alias_of": "AIG-R",
+        "level": 2,
+        "equivalent_to": "AIG-R",
+        "description": "Officially supported alias of AIG-R representing the same classification level."
+      }
+    ]
+  },
+
+  "quick_use": {
+    "attribution": {
+      "text": "This project uses AICCF v1.1.",
+      "reference": "https://github.com/haroonashraf/AICCF"
+    },
+    "classifications": [
+      "Classification: AICCF: AIG-U (AI-Generated Unreviewed)",
+      "Classification: AICCF: AIG-R (AI-Generated Reviewed)",
+      "Classification: AICCF: AIA-R (AI-Assisted Reviewed)",
+      "Classification: AICCF: AIA-HL (AI-Assisted Human-Led)",
+      "Classification: AICCF: H-AIE (Human-Created AI-Enhanced)",
+      "Classification: AICCF: FH (Fully Human - No AI Involvement)"
+    ]
+  },
+
+  "compatibility_alias": {
+    "tag": "AIA-R",
+    "name": "AI-Assisted Reviewed",
+    "alias_of": "AIG-R",
+    "equivalent_classifications": [
+      "Classification: AICCF: AIG-R",
+      "Classification: AICCF: AIA-R"
+    ],
+    "usage": "Both may be used interchangeably."
+  },
+
+  "examples": {
+    "use_cases": {
+      "draft_content": [
+        "AIG-U"
+      ],
+      "reports_documentation": [
+        "AIG-R",
+        "AIA-R",
+        "AIA-HL"
+      ],
+      "code_technical_implementation": [
+        "AIA-HL",
+        "H-AIE"
+      ],
+      "sensitive_or_regulated_content": [
+        "FH",
+        "H-AIE"
+      ]
+    },
+
+    "disclaimers": [
+      "This content was generated with AI assistance and reviewed by a human.",
+      "AI-generated output – requires validation before use.",
+      "Human-led work supported by AI tools.",
+      "This content was created entirely without AI assistance."
+    ]
+  },
+
+  "applicability": [
+    "Articles and reports",
+    "Code and technical solutions",
+    "Data analysis and insights",
+    "Documentation and communication",
+    "End-to-end project deliverables"
+  ],
+
+  "syntax": {
+    "style_1": {
+      "name": "Tag Only",
+      "format": "Classification: AICCF: <TAG>"
+    },
+    "style_2": {
+      "name": "Tag with Details",
+      "format": "Classification: AICCF: <TAG> (<DETAIL>)"
+    }
+  },
+
+  "integration": {
+    "global_reference": {
+      "recommended": true,
+      "contexts": [
+        "repositories",
+        "documentation",
+        "codebases"
+      ],
+      "formats": {
+        "recommended": {
+          "text": "This project uses AICCF v1.1.",
+          "reference": "https://github.com/haroonashraf/AICCF"
+        },
+        "alternative": {
+          "text": "This project uses AICCF v1.1 (AI Content Classification Framework) for content classification.",
+          "reference": "https://github.com/haroonashraf/AICCF"
+        }
+      },
+      "post_reference_usage": "AICCF: AIA-HL"
+    }
+  },
+
+  "specification": {
+    "current_specification": "spec/aiccf-v1-1-spec.json"
+  },
+
+  "versions": {
+    "current": "AICCF v1.1",
+    "previous": [
+      "/versions/aiccf-v1-0.md"
+    ]
+  },
+
+  "compatibility": {
+    "backward_compatible_with": [
+      "AICCF v1.0"
+    ],
+    "changes": [
+      "Added official alias AIA-R (AI-Assisted Reviewed) equivalent to AIG-R",
+      "Clarified FH as Fully Human (No AI Involvement)",
+      "Updated examples and attribution guidance to reference framework versions"
+    ],
+    "note": "All classifications created using AICCF v1.0 remain valid and unchanged."
+  },
+
+  "attribution": {
+    "description": "Attribution is appreciated when this framework is shared, published, or adapted externally.",
+    "required_for_internal_use": false,
+    "suggested_format": {
+      "text": "This project uses AICCF v1.1 (AI Content Classification Framework) for content classification.",
+      "reference": "https://github.com/haroonashraf/AICCF"
+    }
+  },
+
+  "license": {
+    "name": "CC BY 4.0",
+    "full_name": "Creative Commons Attribution 4.0 International",
+    "description": "You are free to use, adapt, and share this framework with appropriate attribution."
+  },
+
+  "final_note": "This classification aims to provide a practical and accessible approach to improving transparency, accountability, and trust in AI-assisted work."
+
+"versioning": {
+  "attribution_version_required": true
+}
+
+}
