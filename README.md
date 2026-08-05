@@ -334,6 +334,71 @@ After this reference is defined, AICCF tags can be used independently throughout
 
 * * *
 
+## 12. Notes /Wiki Pages / OneNote Documentation 
+AICCF can be used alongside document tracking mechanisms such as Last Update logs in Notes, OneNote, Wikis, SharePoint pages, and internal documentation repositories. 
+
+### Style 1 - Notes / OneNote (Plain Text) 
+
+```text
+Page Information 
+
+This project uses AICCF v1.1. 
+
+Reference: 
+https://github.com/haroonashraf/AICCF 
+
+Classification: AICCF: AIA-R (AI-Assisted Reviewed) 
+
+Purpose: Personal and educational purposes only. 
+
+Last Update: 
+04 August 2026 3:15 PM - Version 1.0 ready (<Author Name>) 
+- Note complete and reviewed 
+- Checklist version added
+```
+### Style 2 - Markdown Documentation (Wiki Pages)
+
+```
+# Page Information 
+
+This project uses AICCF v1.1. 
+
+Reference: 
+https://github.com/haroonashraf/AICCF 
+
+**Classification: AICCF: AIA-R (AI-Assisted Reviewed)** 
+
+Purpose: Personal and educational purposes only. 
+
+## Last Update: 
+**04 August 2026 3:15 PM - Version 1.0 ready (<Author Name>)** 
+- Note complete and reviewed 
+- Checklist version added
+```
+
+* * *
+
+### Style 3 - Markdown Documentation with Page Information 
+This style demonstrates a structured Markdown document using page metadata and update tracking. The AICCF README itself follows this style.
+
+```
+Page Information 
+================ 
+
+This project uses AICCF v1.1. 
+
+Reference: https://github.com/haroonashraf/AICCF 
+
+**Classification: AICCF: AIA-HL (AI-Assisted Human-Led)** 
+
+Purpose: Public framework documentation and educational purposes. 
+
+Last Update 
+=========== 
+**04 August 2026 5:00 PM - Version 1.1 updated. (<Author Name>)** 
+- Added Notes, Wiki Pages, and OneNote implementation examples demonstrating AICCF usage alongside Last Update document tracking.
+```
+
 Specification
 =============
 
@@ -363,11 +428,11 @@ Compatibility Notes
 
 AICCF v1.1 maintains backward compatibility with AICCF v1.0.
 Changes introduced in v1.1:
-*   Added official alias `AIA-R` (AI-Assisted Reviewed) equivalent to `AIG-R`
-*   Clarified `FH` as `Fully Human (No AI Involvement)`
-*   Updated examples and attribution guidance to reference framework versions
-All classifications created using AICCF v1.0 remain valid and unchanged.
-
+* Added official alias `AIA-R` (AI-Assisted Reviewed) equivalent to `AIG-R` 
+* Clarified `FH` as `Fully Human (No AI Involvement)` 
+* Updated examples and attribution guidance to reference framework versions 
+* Added Notes, Wiki Pages, and OneNote implementation examples 
+* Added Style 3 Markdown documentation example with Page Information and Last Update tracking
 * * *
 
 Attribution
@@ -400,3 +465,30 @@ Final Note
 This classification aims to provide a practical and accessible approach to improving transparency, accountability, and trust in AI-assisted work.
 Classification: AICCF: AIA-HL (AI-Assisted Human-Led)
 
+* * *
+
+Page Information 
+================
+
+This project uses AICCF v1.1. 
+
+Reference: 
+https://github.com/haroonashraf/AICCF 
+
+**Classification: AICCF: AIA-HL (AI-Assisted Human-Led)** 
+
+Purpose: Public framework documentation and educational purposes. 
+
+Last Update 
+===========
+**21 July 2026 12:45 PM - Version 1.1 released. (Haroon ASHRAF)** 
+- Added AIA-R (AI-Assisted Reviewed) as an official alias of AIG-R. 
+- Clarified FH as Fully Human (No AI Involvement). 
+- Updated attribution guidance. 
+- Introduced versioned specifications. 
+
+**21 July 2026 7:05 PM - Version 1.1 updated. (Haroon ASHRAF)**  
+- Fixed documentation links and repository references following v1.1 publication. 
+
+**04 August 2026 5:00 PM - Version 1.1 updated. (Haroon ASHRAF)** 
+- Added Notes, Wiki Pages, and OneNote implementation examples demonstrating AICCF usage alongside Last Update document tracking. 
