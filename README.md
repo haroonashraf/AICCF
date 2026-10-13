@@ -111,13 +111,52 @@ Both may be used interchangeably.
 
 * * *
 
+AIA-R Review Workflow Clarification
+===================================
+
+In some scenarios, AI generates content directly from author-defined requirements and follows the applicable structure, template, coding standards, or documentation standards.
+
+To improve workflow efficiency, such content may be created directly with an AIA-R (AI-Assisted Reviewed) classification while clearly indicating that author review is still required.
+
+Pending Review Example
+----------------------
+
+    Author: <AuthorName>
+    Date: 07-October-2026
+    Classification: AICCF: AIA-R (AI-Assisted Reviewed)
+    *Pending Author Review (Please remove this line after review)
+
+After Review
+------------
+
+    Author: <AuthorName>
+    Date: 07-October-2026
+    Classification: AICCF: AIA-R (AI-Assisted Reviewed)
+
+Notes
+-----
+
+* Generated from author-defined requirements.
+* The author remains accountable for review and approval.
+* The "Pending Author Review" notice provides visibility that review has not yet been completed.
+* The notice should be removed once review is complete.
+* Testing, repository storage, validation, approval, and publication activities should occur after appropriate review.
+
+* * *
+
+
+
+* * *
+
 Example Use Cases
 =================
 
-*   Draft content / brainstorming → `AIG-U`
-*   Reports / documentation → `AIG-R`, `AIA-R` or `AIA-HL`
-*   Code / technical implementation → `AIA-HL` or `H-AIE`
-*   Sensitive or regulated content → `FH` or `H-AIE`
+* Draft content / brainstorming → AIG-U
+* Reports / documentation → AIG-R, AIA-R or AIA-HL
+* Requirement-driven AI generated content awaiting review → AIA-R with "Pending Author Review" notice
+* Code / technical implementation → AIA-HL or H-AIE
+* Sensitive or regulated content → FH or H-AIE
+
 
 * * *
 
@@ -268,6 +307,30 @@ After this reference is defined, AICCF tags can be used independently throughout
     SELECT TOP 3 Stars
     FROM Sky;
     
+
+
+* * *
+
+## 5A. AI Generated Content Awaiting Review
+
+    Author: SQL BI Developer
+    Date: 07-October-2026
+    Classification: AICCF: AIA-R (AI-Assisted Reviewed)
+    *Pending Author Review (Please remove this line after review)
+
+    Purpose:
+    Initial implementation generated from author-defined requirements.
+    Review is required before testing, repository storage, or publication.
+
+After Review
+
+    Author: SQL BI Developer
+    Date: 07-October-2026
+    Classification: AICCF: AIA-R (AI-Assisted Reviewed)
+
+    Purpose:
+    Reviewed and approved by the author prior to testing and publication activities.
+
 
 * * *
 
@@ -433,6 +496,7 @@ Changes introduced in v1.1:
 * Updated examples and attribution guidance to reference framework versions 
 * Added Notes, Wiki Pages, and OneNote implementation examples 
 * Added Style 3 Markdown documentation example with Page Information and Last Update tracking
+* Added guidance for requirement-driven AI generated content that may be created directly as AIA-R with a temporary "Pending Author Review" notice.
 * * *
 
 Attribution
@@ -492,3 +556,7 @@ Last Update
 
 **04 August 2026 5:00 PM - Version 1.1 updated. (Haroon ASHRAF)** 
 - Added Notes, Wiki Pages, and OneNote implementation examples demonstrating AICCF usage alongside Last Update document tracking. 
+**12 October 2026 2:30 PM - Version 1.1 updated. (Haroon ASHRAF)**
+- Added AIA-R review workflow clarification.
+- Added examples showing use of a temporary "Pending Author Review" notice.
+- Added implementation guidance for AI generated content awaiting author review before testing, repository storage, or publication.

@@ -126,6 +126,36 @@
     "usage": "Both may be used interchangeably."
   },
 
+  "aia_r_review_workflow": {
+    "name": "AIA-R Review Workflow Clarification",
+    "tag": "AIA-R",
+    "description": "In some scenarios, AI generates content directly from author-defined requirements and follows the applicable structure, template, coding standards, or documentation standards. To improve workflow efficiency, such content may be created directly with an AIA-R (AI-Assisted Reviewed) classification while clearly indicating that author review is still required.",
+    "pending_review_notice": {
+      "text": "*Pending Author Review (Please remove this line after review)",
+      "placement": "Immediately after the Classification line",
+      "temporary": true,
+      "remove_after": "Author review is complete"
+    },
+    "pending_review_example": [
+      "Author: <AuthorName>",
+      "Date: 07-October-2026",
+      "Classification: AICCF: AIA-R (AI-Assisted Reviewed)",
+      "*Pending Author Review (Please remove this line after review)"
+    ],
+    "after_review_example": [
+      "Author: <AuthorName>",
+      "Date: 07-October-2026",
+      "Classification: AICCF: AIA-R (AI-Assisted Reviewed)"
+    ],
+    "notes": [
+      "Generated from author-defined requirements.",
+      "The author remains accountable for review and approval.",
+      "The \"Pending Author Review\" notice provides visibility that review has not yet been completed.",
+      "The notice should be removed once review is complete.",
+      "Testing, repository storage, validation, approval, and publication activities should occur after appropriate review."
+    ]
+  },
+
   "example_use_cases": {
     "draft_content": [
       "AIG-U"
@@ -134,6 +164,9 @@
       "AIG-R",
       "AIA-R",
       "AIA-HL"
+    ],
+    "requirement_driven_ai_content_awaiting_review": [
+      "AIA-R (with \"Pending Author Review\" notice)"
     ],
     "code_technical_implementation": [
       "AIA-HL",
@@ -188,6 +221,22 @@
         "reference": "https://github.com/haroonashraf/AICCF"
       },
       "post_reference_usage": "AICCF: AIA-HL"
+    },
+    "ai_generated_content_awaiting_review": {
+      "description": "AI generated content created from author-defined requirements, classified as AIA-R with a temporary Pending Author Review notice.",
+      "pending_review": {
+        "author": "SQL BI Developer",
+        "date": "07-October-2026",
+        "classification": "AICCF: AIA-R (AI-Assisted Reviewed)",
+        "notice": "*Pending Author Review (Please remove this line after review)",
+        "purpose": "Initial implementation generated from author-defined requirements. Review is required before testing, repository storage, or publication."
+      },
+      "after_review": {
+        "author": "SQL BI Developer",
+        "date": "07-October-2026",
+        "classification": "AICCF: AIA-R (AI-Assisted Reviewed)",
+        "purpose": "Reviewed and approved by the author prior to testing and publication activities."
+      }
     }
   },
 
@@ -258,7 +307,8 @@
       "Clarified FH as Fully Human (No AI Involvement)",
       "Updated examples and attribution guidance to reference framework versions",
       "Added Notes, Wiki Pages, and OneNote implementation examples",
-      "Added Style 3 Markdown documentation example with Page Information and Last Update tracking"
+      "Added Style 3 Markdown documentation example with Page Information and Last Update tracking",
+      "Added guidance for requirement-driven AI generated content that may be created directly as AIA-R with a temporary \"Pending Author Review\" notice"
     ]
   },
 
@@ -311,6 +361,17 @@
         "author": "Haroon ASHRAF",
         "changes": [
           "Added Notes, Wiki Pages, and OneNote implementation examples demonstrating AICCF usage alongside Last Update document tracking"
+        ]
+      },
+      {
+        "date": "2026-10-12 14:30",
+        "version": "1.1",
+        "type": "documentation_update",
+        "author": "Haroon ASHRAF",
+        "changes": [
+          "Added AIA-R review workflow clarification",
+          "Added examples showing use of a temporary \"Pending Author Review\" notice",
+          "Added implementation guidance for AI generated content awaiting author review before testing, repository storage, or publication"
         ]
       }
     ]
